@@ -1,0 +1,389 @@
+
+
+.container-home{
+    width: 100%;
+    min-height: 100vh;
+    
+  
+}
+
+.container-img-home{
+    width: 100%;
+    height: 13vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.container-img-home>img{
+    width: 60%;
+    height: 15vh;
+}
+
+.container-avatar{
+    width: 100%;
+    height: 30vh;
+    background-image: url("../img/pokémon-ruta.png");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+.container-avatar>ul{
+    width: 50%;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.411);
+    position: relative;
+    border-radius: 20px;
+    
+}
+
+.container-avatar>ul>.name{
+    background-color: white;
+    color: black;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px 20px 0 0;
+    border-bottom: black 2px solid;
+  
+    
+}
+.container-avatar>ul>.nick-name{
+    background-color: red;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius:0 0 20px 20px;
+    border-top: 2px solid black;
+    color: white;
+    
+}
+
+.container-avatar>ul>img{
+    position: absolute;
+    width: 30px;
+}
+
+.container-avatar>ul>div>li{
+
+    list-style: none;
+    font-family: 'Sedgwick Ave', cursive;
+}
+
+.container-img-avatar{
+   width: 40%;
+   height: calc(30vh - 10px);
+   position: relative;
+   top: -30px;
+}
+
+.container-img-avatar>img{
+    width: 100%;
+    height: 35vh;
+    position: absolute;
+}
+
+.container-home>form{
+    width: 100%;
+    height: 10vh;
+    background-color: rgb(44, 43, 43);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-home>form>input{
+    width: 70%;
+    height: 5vh;
+    border: none;
+    background-color: white;
+    border-radius: 5px 0 0 5px;
+    padding-left: 5px;
+}
+
+
+.container-home>form>input:focus{
+    padding-left: 5px;
+    outline: none;
+}
+
+.container-home>form>button{
+    width: 10%;
+    border: none;
+    background-color: white;
+    height: 5vh;
+    border-radius: 0 5px 5px 0;
+    border-left: 1px solid steelblue;
+    font-size: 1.2rem;
+    color: #375da9;
+  
+}
+
+
+                        /* FILTROS */
+
+.container-home>ul{
+    width: 100%;
+    height: 17vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.container-home>ul>li{
+    width: 23%;
+    list-style: none;
+    padding: 2px;
+    text-align: center;
+    color: white;
+    border: none;
+    font-size: 1.2rem;
+   
+}
+.container-home>ul>li:nth-child(4){
+    border-right: none;
+}                       
+
+.container-home > .main-container-cards{
+    height: 30vh;
+    overflow: hidden;
+    
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+.container-home > .main-container-cards > .container-cards{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    
+}
+
+@keyframes showCase {
+    100%{
+        transform: translateX(-2320px);
+    }
+}
+
+.container-home > .main-container-cards > .container-cards > .card{
+    height: 26vh;
+    padding: 26px;
+    margin: 5px;
+    margin-right: 27px;
+    border-radius: 20px;
+    position: relative;
+    animation: showCase 50s linear infinite;
+    border: 2px solid black;
+    box-shadow: 4px 4px 20px black;
+}
+
+.container-home > .main-container-cards > .container-cards > .card > #pokemon-avatar{
+    position: absolute;
+    bottom: -15px;
+    right: -31px;
+}
+
+.container-home > .main-container-cards > .container-cards > .card > #pokemon-avatar > img{
+    width: 100px;
+    height: 100px;
+}
+
+.container-home > .main-container-cards > .container-cards > .card > #pokemon-description >h4{
+    text-transform: capitalize;
+    font-family: 'Sedgwick Ave', cursive;
+    color: white;
+    width: 100px;
+}
+
+.container-home > .main-container-cards > .container-cards > .card > #pokemon-description > button{
+    width: 50px;
+    padding: 3px 1px 3px 1px;
+    border: none;
+    border-radius: 7px;
+    margin-top: 7px;
+    font-family: 'Sedgwick Ave', cursive;
+}
+
+/* CARDS BACKGROUND */
+
+#grass{
+    background-color: green;
+}
+
+#fire{
+    background-color: rgb(241, 90, 3);
+}
+
+#water{
+    background-color: rgb(12, 172, 235);
+}
+
+#bug{
+    background-color: rgb(168, 235, 12);
+}
+
+#normal{
+    background-color: #570530;
+}
+
+#poison{
+    background-color: rgb(55, 12, 85);
+}
+
+#electric{
+    background-color: rgb(252, 216, 57);
+}
+
+#rock{
+    background-color: rgb(95, 93, 93);
+}
+
+#fighting, #dark{
+    background-color: rgb(34, 62, 88);
+}
+
+#ground{
+    background-color: rgb(189, 119, 40);
+}
+
+#fairy{
+    background-color: rgb(170, 10, 157);
+}
+
+#ghost{
+    background-color: rgb(81, 47, 124);
+}
+
+#psychic{
+    background-color: rgb(175, 10, 167);
+}
+
+#ice{
+    background-color: rgb(3, 49, 202);
+}
+
+
+/* BUTTON FONT COLOR */
+
+
+.grass{
+    color: green;
+}
+
+.fire{
+    color: rgb(238, 77, 14);
+}
+
+.water{
+    color: rgb(12, 172, 235);
+}
+
+.bug{
+    color: rgb(168, 235, 12);
+}
+
+.normal{
+    color: #570530;
+}
+
+.poison{
+    color: rgb(55, 12, 85);
+}
+
+.electric{
+    color: rgb(252, 216, 57);
+}
+
+.ghost{
+    color: rgb(81, 47, 124);
+}
+
+.psychic{
+    color: rgb(175, 10, 167);
+}
+
+.ground{
+    color: rgb(128, 75, 16);
+}
+
+.rock{
+    color: rgb(95, 93, 93);
+}
+
+.fighting{
+    color: rgb(34, 62, 88);
+}
+
+.ice{
+    color: rgb(3, 49, 202);
+}
+
+
+
+.pointer{
+    cursor: pointer;
+}
+
+
+@media screen and (min-width: 600px) {
+
+    .container-img-home{
+        position: absolute;
+        width: 50%;
+        left: -40px;
+        top: 30px;
+        
+    }
+
+    .container-avatar{
+        margin: 0 auto;
+        height: 90vh;
+    }
+
+    .container-img-avatar{
+        width: 40%;
+        height:80vh;
+        position: relative;
+        top: 0px;
+     }
+
+     .container-img-avatar>img{
+         height: 80vh;
+     }
+
+     .container-avatar>ul{
+        width: 20%;
+        height: 30vh;
+        margin-right: 70px;
+        
+    }
+
+    .container-home>form>input{
+        width: 30%;
+       
+    }
+
+    
+}
+

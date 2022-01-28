@@ -1,0 +1,200 @@
+.container-login{
+    background-image: url('https://cutewallpaper.org/21/pokemon-gif-wallpaper/Purple-Eared-Pikachu-Animation-by-moxie2D-Pikachu-art-.gif');
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+:root{
+    --Mwidth: 18rem;
+    --mwidth: 17rem;
+    --height: 20vh;
+}
+
+.logo-image{
+    width: var(--Mwidth);
+    height: 120px;
+    position: relative;
+}
+
+.logo-image > img{
+    width: 100%;
+}
+
+.logo-image > .spinning-o{
+    width: 19%;
+    position: absolute;
+    top: 26%;
+    right: 11%;
+   
+}
+
+.logo-image > .spinning-o > img{
+    width: 100%;
+    animation: spinning .7s linear infinite;
+}
+
+@keyframes spinning {
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.container-images{
+    width: 100%;
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-images>img{
+    width: 25%;
+    height: 50%;
+}
+
+.container-images>img:nth-child(2){
+    width: 18%;
+}
+
+/* SIGUIENTE */
+
+.container-login>form{
+    width: 80%;
+    border: 2px solid rgba(248, 246, 246, 0.295);
+    border-radius: 4px;
+    padding: 10px 20px;
+    height: 54vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-weight: 500;
+    animation: spectrum 5s ease-in-out infinite;
+    
+}
+
+@keyframes spectrum {
+    0%{
+        color:rgba(2, 2, 2, 0)
+    }50%{
+        color: rgb(255, 255, 255);
+    }
+    100%{
+        color:rgba(2, 2, 2, 0)
+    }
+}
+
+.container-login>form>section{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.container-login>form>section>input{
+    width: 100%;
+    padding: 4px;
+    border: none;
+    border-left: .5px solid rgba(248, 245, 245, 0.295);
+    border-right: .5px solid rgba(248, 245, 245, 0.295);
+    border-bottom: .5px solid rgba(248, 245, 245, 0.295);
+    border-radius: 4px;
+    outline: none;
+    -webkit-box-shadow: 0px 10px 13px -7px #00000048, 4px 4px 0px 0px rgba(89, 89, 89, 0.034); 
+    box-shadow: 0px 10px 13px -9px #f8f5f580, 4px 4px 0px 0px rgba(89, 89, 89, 0.027);
+}
+
+.container-login>form>section>input[type=text]{ 
+    background-color: rgba(0, 0, 255, 0);
+    color: #1adaf3;
+}
+
+input[type='radio']:empty::after{
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #fff;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    
+}
+
+
+
+input[type='radio']:checked::after {
+    width: 10px;
+    height: 10px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #1adaf3;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 3px solid white;
+    
+ 
+}
+
+.container-login>form>.container-radio{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container-login>form>.container-radio > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.container-login>form>button{
+    width: 5rem;
+    padding: 10px;
+    margin: 0 auto;
+    background-color: rgba(248, 246, 246, 0);
+    color: rgb(244, 249, 250);
+    border: 1px solid rgba(248, 246, 246, 0.295);
+    border-radius: 4px;
+    -webkit-box-shadow: 0px 10px 13px -7px #00000048, 4px 4px 0px 0px rgba(89, 89, 89, 0.034); 
+    box-shadow: 0px 10px 13px -9px #f8f5f580, 4px 4px 0px 0px rgba(89, 89, 89, 0.027);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+@media screen and (min-width: 800px) {
+
+    .container-login{
+        flex-direction: row;
+    }
+
+    .container-login>form{
+        width: 30%;
+        border: 2px solid rgba(248, 246, 246, 0.295);
+        border-radius: 4px;
+        padding: 10px 20px;
+        height: 74vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        font-weight: 500;
+        animation: spectrum 5s ease-in-out infinite;
+        
+    }
+    
+}

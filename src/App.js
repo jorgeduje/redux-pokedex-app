@@ -1,24 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { ProtectedRoutes } from "./components/ProtectedRoutes"
+import {Login} from "./views/Login"
+import { Home } from "./views/Home"
+import { PokemonTypeSelected } from "./views/PokemonTypeSelected"
+import {FetchComponent} from "./FETCH-COMP/FetchComponent"
+import { SingledOutPokemon } from "./views/SingledOutPokemon";
 
 function App() {
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   
+    <BrowserRouter>
+      <Routes>
+
+          <Route path="/" element={ 
+          
+          <>
+            <Login /> 
+            <FetchComponent/>
+          </>
+        }/>
+
+
+          <Route element={ <ProtectedRoutes /> }>
+
+              <Route path="/pokedex" element={ <Home /> }/>
+              <Route path="/pokedex/type/:type" element={ <PokemonTypeSelected /> }/>
+              <Route path="/pokedex/pokemon/:name" element={ <SingledOutPokemon /> }/>
+
+          </Route>
+
+
+      </Routes>
+    </BrowserRouter>
+
   );
 }
 

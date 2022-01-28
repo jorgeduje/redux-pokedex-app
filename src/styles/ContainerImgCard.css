@@ -1,0 +1,19 @@
+.display-card{
+    display: none;
+   
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.display-card>div>img{
+    width: 50px;
+}
+
+
+@media screen and (min-width: 700px) {
+
+    .display-card{
+        display: flex;
+    }
+    
+}
