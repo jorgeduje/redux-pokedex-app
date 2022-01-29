@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router';
 
@@ -8,12 +8,14 @@ import female from "../img/femaleTrainer.png"
 import { FloatingCards } from '../components/FloatingCards';
 import { Loader } from '../components/Loader';
 
-import { FilterSelector, ResetValue } from '../redux/actions/Actions';
+import { FilterSelector, ResetValue, searchPokemon } from '../redux/actions/Actions';
 
 
 
 
 export const Home = () => {
+
+  const [nameInput, setNameInput] = useState("")
 
   const dispatch = useDispatch()
 
@@ -31,11 +33,29 @@ export const Home = () => {
     dispatch(ResetValue())
 
   }, [dispatch])
+
  
+  const pokeSearch = ( e )=>{
+
+    e.preventDefault()
+
+    const nameTrim = nameInput.trim()
+
+    const doesExist = InitialData.filter( pokemon => pokemon.name === nameTrim)
+
+   if(doesExist.length > 0){
+
+      dispatch(searchPokemon(nameTrim))
+      navigate(`/pokedex/pokemon/${nameTrim}`)
+
+   }else{
+
+    navigate(`/pokedex/${nameTrim}`)
+
+   }
 
 
-
-
+  }
 
   return (
 
@@ -67,8 +87,8 @@ export const Home = () => {
           
         </section>
 
-        <form>
-              <input type="text" />
+        <form onSubmit={(e)=>pokeSearch(e)}>
+              <input type="text" onChange={(e)=> setNameInput(e.target.value.toLowerCase())}/>
              <button type='submit'><i className="fab fa-searchengin"></i></button>
         </form>
 

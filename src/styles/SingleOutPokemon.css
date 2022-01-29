@@ -79,7 +79,7 @@
     
 
 }
-.container-sprites>img{
+.container-sprites>div>img{
     width: 80px;
     height: 80px;
 }
@@ -202,6 +202,8 @@
 }
 
 
+
+
 @media screen and (min-width: 900px) {
 
     .container-single-poke{
@@ -251,18 +253,17 @@
 
     .container-sprites{
         width: 100%;
-        display: flex;
-        justify-content: space-evenly;
+       
         position: relative;
-        
-    
     }
-    .container-sprites>img{
-        width: 100px;
-        height: 100px;
+
+    .container-sprites>div>img{
+        width: 130px;
+        height: 130px;
         box-shadow: 2px 2px 20px black;
         border-radius: 50%;
         background-color: black;
+        margin-right: 10px;
     }
 
 
@@ -270,14 +271,21 @@
     .container-poke-effect{
         display: flex;
         position: absolute;
-        top: -10px;
+        top: -60px;
         
     }
 
     .container-poke-effect>img{
-        width: 150px;
+        width: 100px;
+        height: 100px;
         cursor: pointer;
 
+    }
+
+    .container-poke-{
+        display: flex;
+        position: absolute;
+        top: -60px;
     }
 
     .container-poke-effect>.fade{

@@ -4,5 +4,6 @@ export const Types = {
     Error: 'Error',
     Filter: 'Filter',
     Reset: "Reset",
-    Single: "Single"
+    Single: "Single",
+    Search: "Search"
 }

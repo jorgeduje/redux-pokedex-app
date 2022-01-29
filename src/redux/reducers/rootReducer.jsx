@@ -51,6 +51,13 @@ export const rootReducer = ( state = initialState, action )=>{
                 singlePoke: state.initialData.filter( pokemon => pokemon.id === action.payload) 
             }
 
+        case Types.Search:
+            return{
+                ...state,
+                singlePoke: state.initialData.filter( pokemon => pokemon.name === action.payload)
+                
+            }
+
         default:
             return state;
     }

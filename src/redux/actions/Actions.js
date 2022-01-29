@@ -44,3 +44,10 @@ export const SingleOut = ( id )=>{
         payload: id
     }
 }
+
+export const searchPokemon = (name)=>{
+    return{
+        type: Types.Search,
+        payload: name
+    }
+}
